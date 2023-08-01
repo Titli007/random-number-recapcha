@@ -1,0 +1,190 @@
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+body{
+    background-image: url(./images/bg-intro-desktop.png);
+    background-color: hsl(0, 100%, 74%);
+    
+}
+.full{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+}
+.mainform{
+    display: flex;
+    flex-direction: column;
+}
+.head{
+    font-weight: 700;
+    font-size: 36px;
+}
+.para{
+    font-weight: 500;
+    font-size: 16px;
+}
+.f{
+    font-weight: 600;
+    font-size: 16px;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: .1px .1px 1px  black;
+    width: 89%;
+    
+}
+.f:hover {
+    /* border-bottom: 1px solid black; */
+}
+.btn{
+    background-color: gray;
+    font-weight: 400;
+    width: 480px;
+    color: white;
+    font-size: 22px;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    border: transparent;
+}
+.btn-capcha{
+    font-weight: 400;
+    /* width: 96%; */
+    width: 480px;
+    color: white;
+    /* display: block; */
+    font-size: 22px;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    border: transparent;
+    background-color: hsl(154, 59%, 51%);
+}
+.btn-capcha:hover{
+    transition : all .5s ease-in-out;
+    transform: scale(.95);
+    transform: rotateY(30deg);
+    background-color: hsl(156, 84%, 15%);
+}
+.check{
+    font-weight: 400;
+    font-size: 11px;
+    color: hsl(246, 25%, 77%);
+    text-align: center;
+}
+.topform{
+    background-color: hsl(248, 32%, 49%);
+    padding: 15px;
+    margin: 10px 0 10px 0;
+    border-radius: 5px;
+    text-align: center;
+}
+.white{
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+}
+.left{
+    margin-right: 80px;
+}
+.e{
+  width: 100%;
+  position: relative;
+  left: 260px;
+}
+.i{
+    position: absolute;
+    right: 18px;
+    top: 25px;
+    visibility: hidden;
+}
+.box1, .box2, .box3, .box4{
+    position: relative;
+}
+.mainform div{
+    width: 100%;
+}
+.cls{
+    border: 2px solid red;
+}
+.cls::placeholder{
+    color: white;
+}
+.capcha{
+    font-size: 20px;
+    color: gray;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    color: rgb(106, 206, 246);
+}
+#tick{
+    margin-right: 10px;
+    background-color: rgb(106, 206, 246);
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    color: gray;
+    border-radius: 10px;
+    font-size: 30px;
+    border: 3px solid gray;
+}
+#bal{
+    opacity: 0;
+    transition: all .4s ease-in-out;
+    cursor: pointer;
+}
+#tick:hover{
+    background-color: white;
+    transition: all .3s ease-in-out;
+
+}
+#checkbox-text{
+    padding-top: 6px;
+}
+#capcha-icon{
+    height: 70px;
+    margin-left: 20px;
+    margin-top: -10px;
+}
+.tooltip{
+    color: rgb(255, 255, 255);
+    /* visibility: hidden; */
+    background-color:black ;
+    display: inline-block;
+    padding: 3px;
+    border: 2px solid ;
+    font-size: 14px;
+    position: absolute;
+    right: 26.5em;
+    bottom: 17em;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+    transition-delay: .1s;
+
+}
+.tooltip::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 10px solid;
+    border-color: #000 #0000 #0000 #0000;
+}
+

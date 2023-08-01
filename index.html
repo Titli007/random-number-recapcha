@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="full">
+    <div class="left">
+      <div class="head">
+        Learn to code by<br> watching others
+      </div>
+      <div class="para">
+        See how experienced developers solve problems in real-time.<br> Watching scripted tutorials is great,
+        but understanding how<br> developers think is invaluable.
+      </div>
+    </div>
+    <div class="right">
+      <div class="topform">
+        <strong>Try it free 7 days</strong> then $20/mo. thereafter
+      </div>
+      <div class="white">
+        <form class="mainform">
+
+          <div>
+            <div class="box1">
+              <input class="f" id="fname" type="text" placeholder="First Name">
+              <img id="i1" class="i" src="./images/icon-error.svg">
+            </div>
+            <span id="one" class="e" style="color: hsl(0, 100%, 74%);"></span>
+          </div>
+
+
+          <div>
+            <div class="box2">
+              <input class="f" id="lname" type="text" placeholder="Last Name">
+              <img id="i2" class="i" src="./images/icon-error.svg">
+            </div>
+            <span id="two" class="e" style="color: hsl(0, 100%, 74%);"></span>
+          </div>
+
+
+          <div>
+            <div class="box3">
+
+              <input class="f" id="email" type="email" placeholder="Email Address">
+              <img id="i3" class="i" src="./images/icon-error.svg">
+            </div>
+            <span id="three" class="e" style="color: hsl(0, 100%, 74%);"></span>
+          </div>
+
+          <div>
+            <div class="box4">
+              <input class="f" id="pass" type="password" placeholder="Password">
+              <img id="i4" class="i" src="./images/icon-error.svg">
+            </div>
+            <span id="four" class="e" style="color: hsl(0, 100%, 74%);"></span>
+          </div>
+        </form>
+        <div class="tooltip" id="tip">
+          <span>reCAPCHA</span>
+        </div>
+        <div class="capcha">
+          <!-- <div class="box"> -->
+          <p id="tick"><span id="bal">&#10004;</span></p>
+          <!-- </div> -->
+          <p id="checkbox-text">I'm not a robot</p>
+          <img id="capcha-icon" class="capcha-icon" src="./images/dVHQiE0t_400x400.png">
+        </div>
+        
+        <button class="btn" id="btn" disabled>
+          Claim your free trial
+        </button>
+
+        <div class="check">
+          <span>By clicking the button, you are agreeing to our</span> <span style="color:hsl(0, 100%, 74%); font-weight: 500;">Terms
+            and Services</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p class="attribution" style="margin-top: 200px;">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Titli</a>.
+    </p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
