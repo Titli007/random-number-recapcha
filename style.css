@@ -124,67 +124,64 @@ body{
     color: white;
 }
 .capcha{
-    font-size: 20px;
-    color: gray;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 20px;
     display: flex;
-    justify-content: center;
-    color: rgb(106, 206, 246);
+    flex-direction: column;
+    color: black;
+    margin: 15px;
+    position: relative;
 }
-#tick{
-    margin-right: 10px;
-    background-color: rgb(106, 206, 246);
-    width: 40px;
+.cap-text{
+    color: black;
+}
+#random{
+    color: black;
+    background-color: rgb(208, 202, 202);
     height: 40px;
     text-align: center;
-    color: gray;
-    border-radius: 10px;
-    font-size: 30px;
-    border: 3px solid gray;
+    width: 40%;
+    margin: 15px 0 15px 0;
+    padding-top: 4px;
+    border: 2px dotted black;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 25px;
+    font-family: 'Big Shoulders Inline Text', cursive;
+    /* text-decoration: line-through; */
+    letter-spacing: 14px;
 }
-#bal{
-    opacity: 0;
-    transition: all .4s ease-in-out;
+#capcha-input{
+    /* width: 90%; */
+    color: rgb(35, 34, 34);
+    border: 2px solid black;
+    height: 40px;
+    margin: 10px;
+    padding: 0 10px 0 10px;
+    font-size: 18px;
+}
+#capcha-input::placeholder{
+    font-size: 18px;
+    color: rgb(96, 96, 96);
+}
+.fa-solid{
+    position: absolute;
+    top: 50px;
+    left: 210px;
+    font-size: 25px;
+}
+.fa-solid:hover{
+    opacity: .5;
+    transition: all .3s ease-in-out;
     cursor: pointer;
 }
-#tick:hover{
-    background-color: white;
-    transition: all .3s ease-in-out;
-
+#cap-btn{
+    font-size: 18px;
+    background-color: rgb(139, 213, 137);
+    padding: 8px;
+    border-radius: 5px;
 }
-#checkbox-text{
-    padding-top: 6px;
-}
-#capcha-icon{
-    height: 70px;
-    margin-left: 20px;
-    margin-top: -10px;
-}
-.tooltip{
-    color: rgb(255, 255, 255);
-    /* visibility: hidden; */
-    background-color:black ;
-    display: inline-block;
-    padding: 3px;
-    border: 2px solid ;
-    font-size: 14px;
-    position: absolute;
-    right: 26.5em;
-    bottom: 17em;
-    opacity: 0;
-    transition: opacity 0.5s ease-in;
-    transition-delay: .1s;
-
-}
-.tooltip::after{
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    border: 10px solid;
-    border-color: #000 #0000 #0000 #0000;
+#cap-btn:hover{
+    opacity: .6;
+    transition: .3s ease-in-out;
 }
 

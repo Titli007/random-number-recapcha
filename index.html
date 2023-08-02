@@ -8,8 +8,16 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text:wght@200&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Intro component with sign up form</title>
 
@@ -80,15 +88,16 @@
             <span id="four" class="e" style="color: hsl(0, 100%, 74%);"></span>
           </div>
         </form>
-        <div class="tooltip" id="tip">
-          <span>reCAPCHA</span>
-        </div>
+    
         <div class="capcha">
-          <!-- <div class="box"> -->
-          <p id="tick"><span id="bal">&#10004;</span></p>
-          <!-- </div> -->
-          <p id="checkbox-text">I'm not a robot</p>
-          <img id="capcha-icon" class="capcha-icon" src="./images/dVHQiE0t_400x400.png">
+          <p class="cap-text">To continue, type the characters you see in the picture.</picture></p>
+          <del id="random"></del>
+          <i onclick="randomNumber()" class="fa-solid fa-arrows-rotate"></i>
+          <div class="form">
+            <label id="capcha-lebel">Characters:</label>
+            <input id="capcha-input" type="text" placeholder="enter capcha">
+            <button onclick="submitCapcha()" id="cap-btn">submit</button>
+          </div>
         </div>
         
         <button class="btn" id="btn" disabled>

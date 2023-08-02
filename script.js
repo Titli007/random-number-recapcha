@@ -4,6 +4,54 @@ let email;
 let pass;
 
 
+randomNumber();
+
+
+function submitCapcha(){
+    let x = document.getElementById('capcha-input').value;
+    let y = document.getElementById('random').innerHTML;
+    if(x === y){
+        console.log('true');
+        document.getElementById('btn').removeAttribute("disabled");
+        document.getElementById('btn').classList.remove('btn');
+        document.getElementById('btn').classList.add('btn-capcha');
+    }
+    else{
+        window.alert("Invalid capcha");
+        randomNumber();
+        document.getElementById('capcha-input').value="";
+    }
+}
+
+function randomNumber(){
+
+    const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    
+    let arr=[];
+    arr[0]=alphabet[Math.floor(Math.random() * alphabet.length)];
+    arr[1]=alphabet[Math.floor(Math.random() * alphabet.length)];
+    arr[2]=Math.floor(Math.random() * 10);
+    arr[3]=alphabet[Math.floor(Math.random() * alphabet.length)];
+    arr[4]=Math.floor(Math.random() * 10);
+    arr[5]=alphabet[Math.floor(Math.random() * alphabet.length)];
+    
+    // console.log(arr);
+    
+    let str=arr.join("");
+    
+    // console.log(str);
+    
+    document.getElementById('random').innerHTML=str;
+    
+};
+
+
+let capchaText=document.getElementById('random');
+let capchaInput= document.getElementById('capcha-input');
+let submit= document.getElementById('cap-btn');
+
+
+
 
 // document.getElementById("btn").onclick = () => {
 //     fname = document.getElementById("fname").value;
@@ -21,26 +69,7 @@ let pass;
 // }
 
 
-let tick=document.getElementById('tick');
-tick.addEventListener('click', () =>{
-    // tick.innerHTML="&#10004;";
-    tick.style.backgroundColor="white";
-    bal.style.opacity="1";
-    document.getElementById('btn').classList.add('btn-capcha');
-    document.getElementById('btn').classList.remove('btn');
-    if(tick.innerHTML === "&#10004;"){
-        document.getElementById('btn').removeAttribute("disabled", false);
-    }
-    else{
-        document.getElementById('btn').removeAttribute("disabled", true);
-    }
-});
-document.getElementById('capcha-icon').addEventListener('mouseover', () =>{
-    document.getElementById('tip').style.opacity="1";
-});
-document.getElementById('capcha-icon').addEventListener('mouseout', () =>{
-    document.getElementById('tip').style.opacity="0";
-});
+
 
 
 document.getElementById("btn").onclick = () => {
@@ -73,13 +102,17 @@ document.getElementById("btn").onclick = () => {
     } 
     else{
         window.alert("YOUR ACCOUNT HAS BEEN SUCCESFULLY CREATED");
+        window.location.reload();
     }
 
     console.log(fname, lname, email, pass);
+
 };
 
 
 // console.log(document.getElementById("fname"));
-console.log(document.getElementsByClassName("f")[0]);
+// console.log(document.getElementsByClassName("f")[0]);
+
+
 
 
